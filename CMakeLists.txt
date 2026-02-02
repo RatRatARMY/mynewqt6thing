@@ -13,7 +13,16 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(mynewqt6thing main.cpp)
+add_executable(mynewqt6thing main.cpp
+        login.cpp
+        login.hpp
+        login.ui
+        register.cpp
+        register.hpp
+        register.ui
+        home.cpp
+        home.hpp
+        home.ui)
 target_link_libraries(mynewqt6thing
         Qt::Core
         Qt::Gui
