@@ -22,7 +22,21 @@ add_executable(mynewqt6thing main.cpp
         register.ui
         home.cpp
         home.hpp
-        home.ui)
+        home.ui
+        sdl3game1_desc.cpp
+        sdl3game1_desc.hpp
+        sdl3game1_desc.ui
+        sdl3game2_desc.cpp
+        sdl3game2_desc.hpp
+        sdl3game2_desc.ui
+        sdl3game3_desc.cpp
+        sdl3game3_desc.hpp
+        sdl3game3_desc.ui
+        sdl3game4_desc.cpp
+        sdl3game4_desc.hpp
+        sdl3game4_desc.ui
+        assets/common.qrc
+)
 target_link_libraries(mynewqt6thing
         Qt::Core
         Qt::Gui
