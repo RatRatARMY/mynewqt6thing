@@ -26,7 +26,7 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>&lt;not have background because background is white&gt;</string>
+        <string>&lt;not have preview because background is white&gt;</string>
        </property>
       </widget>
      </item>
