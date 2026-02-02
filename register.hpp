@@ -26,6 +26,8 @@ public:
 
 private:
     Ui::RegisterWND *ui;
+    void register_();
+    void ret_to_login();
 };
 
 
