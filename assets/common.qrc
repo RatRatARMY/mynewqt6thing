@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="bacon">
+    <file>qt6/bacon.png</file>
+  </qresource>
+  <qresource prefix="minecraftBlocks">
+    <file>qt6/Bamboo_Mosaic.png</file>
+    <file>qt6/Beacon.webp</file>
+    <file>qt6/Grass.webp</file>
+  </qresource>
+  <qresource prefix="playButton">
+    <file>qt6/play.png</file>
+  </qresource>
+  <qresource prefix="backgrounds">
+    <file>qt6/pygame1_desc.png</file>
+    <file>qt6/pygame3_desc.png</file>
+    <file>qt6/pygame4_desc.png</file>
+  </qresource>
+</RCC>
