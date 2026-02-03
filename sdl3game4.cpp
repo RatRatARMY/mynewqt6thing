@@ -68,7 +68,6 @@ int game4::launch() {
     }
     int score = 0;
     int missed = 0;
-    long long can_reach = static_cast<long long>(score + missed);
     int star_x = randint(0, SCREEN_WIDTH - 91);
     int star_y = 0;
     int star_speed = 5;
@@ -148,7 +147,7 @@ int game4::launch() {
         SDL_RenderTexture(renderer, missed_texture, nullptr, &missed_rect);
         SDL_DestroySurface(missed_surface);
         SDL_DestroyTexture(missed_texture);
-        std::string can_reach_str = "You can reach " + std::to_string(can_reach) + " star(s) if you don't miss.";
+        std::string can_reach_str = "You can reach " + std::to_string(static_cast<long long>(score + missed)) + " star(s) if you don't miss.";
         SDL_Surface* can_reach_surface = TTF_RenderText_Solid(common_font, can_reach_str.c_str(), 0, white);
         SDL_Texture* can_reach_texture = SDL_CreateTextureFromSurface(renderer, can_reach_surface);
         SDL_FRect can_reach_rect = {0, 40, static_cast<float>(can_reach_surface->w),
@@ -158,7 +157,7 @@ int game4::launch() {
         SDL_DestroyTexture(can_reach_texture);
         if (score + missed != 0) {
             std::ostringstream oss;
-            oss << std::fixed << std::setprecision(2) << static_cast<float>(score) / can_reach * 100;
+            oss << std::fixed << std::setprecision(2) << static_cast<float>(score) / static_cast<long long>(score + missed) * 100;
             std::string percentage_str = "Percentage: " + oss.str() + "%";
             SDL_Surface* percentage_surface = TTF_RenderText_Solid(common_font, percentage_str.c_str(), 0, white);
             SDL_Texture* percentage_texture = SDL_CreateTextureFromSurface(renderer, percentage_surface);
