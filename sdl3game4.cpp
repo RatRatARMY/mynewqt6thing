@@ -11,9 +11,9 @@
 #include <iomanip>
 
 int game4::launch() {
-    const int SCREEN_WIDTH = 1152;
-    const int SCREEN_HEIGHT = 864;
-    const int FPS = 60;
+    constexpr int SCREEN_WIDTH = 1152;
+    constexpr int SCREEN_HEIGHT = 864;
+    constexpr int FPS = 60;
     if (not SDL_Init(SDL_INIT_VIDEO)) {
         SDL_Log("Cannot init SDL for some reason: %s", SDL_GetError());
         return 1;
